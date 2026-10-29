@@ -1,0 +1,9 @@
+/* Language selector: original CSS; works on mobile and desktop. */
+.language-switch {display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid rgba(17,22,29,.15);border-radius:999px;background:rgba(255,255,255,.50);white-space:nowrap;flex-shrink:0}
+.language-option {display:inline-flex;align-items:center;justify-content:center;gap:5px;min-width:51px;min-height:32px;padding:4px 7px;border:1px solid transparent;border-radius:999px;opacity:.60;transition:opacity .2s,background .2s,box-shadow .2s}
+.language-option:hover {opacity:1;background:#fff}
+.language-option.is-current {opacity:1;background:var(--ink);color:#fff;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.language-option img {width:26px;height:18px;display:block;border-radius:2px;object-fit:cover;border:1px solid rgba(0,0,0,.08)}
+.lang-code {font-size:10px;line-height:1;letter-spacing:.025em;font-weight:900}
+@media(max-width:760px){.header-actions{gap:8px}.language-switch{gap:0;padding:3px}.language-option{min-width:43px;gap:3px;padding:5px}.language-option img{width:22px;height:16px}.lang-code{font-size:9px}.mobile-toggle{padding:8px 10px;font-size:12px}}
+@media(max-width:370px){.header-inner{gap:6px}.brand{font-size:18px}.language-option{min-width:40px}.lang-code{font-size:8px}}

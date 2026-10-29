@@ -1,0 +1,47 @@
+/* TYMZANG counter — original CSS, independent from the portfolio template. */
+.visitor-stats {
+  margin-top: clamp(46px, 7vw, 98px);
+  padding: 26px 0 26px;
+  border-top: 1px solid rgba(255,255,255,.20);
+  border-bottom: 1px solid rgba(255,255,255,.20);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px 65px;
+  color: #f7f6f0;
+}
+.visitor-stats__heading {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #a8b6c4;
+  flex-basis: 100%;
+}
+.visitor-stat { min-width: 195px; display: flex; flex-direction: column; gap: 8px; }
+.visitor-stat__label {
+  color: #a8b6c4; font-size: 12px; letter-spacing: .025em;
+  display: flex; align-items: center; gap: 9px;
+}
+.visitor-stat__label::before {
+  content: ''; height: 7px; width: 7px; border: 1px solid #c9f38b;
+  border-radius: 50%; flex: 0 0 7px;
+}
+.visitor-stat--active .visitor-stat__label::before { background: #c6f47a; box-shadow: 0 0 0 3px rgba(198,244,122,.12); }
+.visitor-stat__value { font-size: clamp(29px,3vw,38px); line-height: 1.13; font-weight: 760; letter-spacing: -.055em; font-variant-numeric: tabular-nums; }
+.visitor-stat__value .counterapi {
+  font: inherit !important;
+  color: inherit !important;
+  background: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline-block;
+  min-height: 1em;
+}
+.visitor-stats__note { color: #8d9cab; font-size: 11px; line-height: 1.5; margin-left: auto; max-width: 220px; }
+@media(max-width:680px) {
+  .visitor-stats { gap: 20px; }
+  .visitor-stat { min-width: calc(50% - 10px); flex:1; }
+  .visitor-stats__note { margin-left: 0; max-width: none; flex-basis:100%; }
+}
